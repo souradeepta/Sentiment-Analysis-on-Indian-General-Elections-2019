@@ -1,5 +1,5 @@
-# Readme for CIS 600 Project
-## TOPIC: Sentiment Analysis to predict Indian General Elections 2019 
+# Readme for this Project
+## TOPIC: Sentiment Analysis on Indian General Elections 2019 
 
 ```
 code
