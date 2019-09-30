@@ -1,0 +1,35 @@
+{
+    "settings" : {
+        "number_of_shards" : 1,
+        "number_of_replicas" : 0
+    },
+    "mappings" : {
+        "properties" : {
+            "tweetID" : { "type" : "keyword" },
+            "party_name" : { "type" : "keyword" },
+            "party_name_short" : { "type" : "keyword" },
+            "date_time" : { "type" : "date" },
+            "tweet" : { "type" : "text" },
+            "screen_name" : { "type" : "keyword" },
+            "device_type" : {
+                "type" : "text",
+                "fields": {
+                    "raw": {
+                        "type":  "keyword"
+                    }
+                }
+            },
+            "country" : { "type" : "keyword" },
+            "country_code" : { "type" : "keyword" },
+            "city" : { "type" : "keyword" },
+            "place" : { "type" : "text" },
+            "location" : { "type" : "geo_point" },
+            "sentiment_naivebayes_str" : { "type" : "keyword" },
+            "sentiment_naivebayes_num" : { "type" : "integer" },
+            "sentiment_textblob_str" : { "type" : "keyword" },
+            "sentiment_textblob_num" : { "type" : "integer" },
+            "confidence" : { "type" : "float" },
+            "followers_count" : { "type" : "integer" }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+docker run --name senti-mysql -p 13306:3306 -v C:\workspaces\SMDM\project\dump:/dump -v C:\workspaces\SMDM\project\data:/var/lib/mysql -e MYSQL_USER=scott -e MYSQL_ROOT_PASSWORD=tiger -d mysql:8.0.15
+
+docker exec -it senti-mysql bash
+
+docker run -d --name elasticsearch --net elasticnet -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.0.0
+
+docker run -d --name kibana --net elasticnet -p 5601:5601 kibana:7.0.0
